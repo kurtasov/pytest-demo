@@ -3,7 +3,8 @@ from main import second_function
 
 def test_mocking_class_method(mocker):
     def mock_get_data(self):
-        return {"field1": 100, "field2": 200}
+        x = 100
+        return {"field1": x, "field2": 200}
 
     mocker.patch(
         'main.DataProvider.get_data',  # Мокируем get_data(),
